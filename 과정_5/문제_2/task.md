@@ -61,14 +61,15 @@ sudo docker rm my-ubuntu-test
 ## 3. 예시 명령어 비교
 
 ### 이름 미지정
-    ```bash
-    docker run -it ubuntu bash
-    ```
+
+docker run -it ubuntu bash
+
 - 종료하면 컨테이너도 같이 종료되고, 다시 실행 시 새로운 컨테이너 생성
+
 ### 이름 지정
-    ```bash
-    docker run -it --name my-ubuntu ubuntu bash
-    docker start -ai my-ubuntu
-    ```
+
+docker run -it --name my-ubuntu ubuntu bash
+docker start -ai my-ubuntu
+
 - 종료 후 다시 실행하면 이전 상태 그대로 사용 가능
 ```
