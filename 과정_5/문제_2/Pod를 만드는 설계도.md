@@ -1,4 +1,3 @@
-```markdown
 # 🧭 Kubernetes 선언형 실습: Pod → YAML → Service → 브라우저 접속
 
 ---
