@@ -1,5 +1,5 @@
 # ✅ Ubuntu 컨테이너 실습: Docker 명령어 모음
-
+```bash
 # 1. Docker Hub에서 ubuntu 이미지 검색
 docker search ubuntu
 
@@ -15,17 +15,18 @@ sudo docker inspect ubuntu:20.04
 
 # 5. 이미지 히스토리 확인
 sudo docker history ubuntu:20.04
-
+```
 # ✅ Ubuntu 컨테이너 생성 및 파일 테스트
-
+```bash
 # 6. ubuntu:20.04 이미지로 bash 쉘 컨테이너 실행 (컨테이너 이름 미지정)
 sudo docker run -it ubuntu:20.04 bash
 
 # 7. 컨테이너 내부에서 파일 생성 (예: /tmp/hello.txt)
 touch /tmp/hello.txt
 exit
+```
 ❗ 주의: 컨테이너를 exit하면 자동 삭제되므로, 다음 명령어로 컨테이너를 삭제하지 않고 종료하거나 이름을 지정해서 재사용할 수 있도록 하자.
-
+```bash
 # 6-2. 이름을 지정하여 실행
 sudo docker run -it --name my-ubuntu-test ubuntu:20.04 bash
 
@@ -42,7 +43,9 @@ exit
 
 # 9. 컨테이너 삭제
 sudo docker rm my-ubuntu-test
-🏅 보너스 과제: 컨테이너 이름 지정 시와 미지정 시 차이
+```
+# 🏅 보너스 과제: 컨테이너 이름 지정 시와 미지정 시 차이
+```bash
 # 보너스 과제: 컨테이너 이름 지정의 차이
 
 ## 1. 이름 미지정 시
@@ -57,13 +60,15 @@ sudo docker rm my-ubuntu-test
 
 ## 3. 예시 명령어 비교
 
-### 이름 지정
-```bash
-docker run -it ubuntu bash
-```
+### 이름 미지정
+    ```bash
+    docker run -it ubuntu bash
+    ```
 - 종료하면 컨테이너도 같이 종료되고, 다시 실행 시 새로운 컨테이너 생성
-```bash
-docker run -it --name my-ubuntu ubuntu bash
-docker start -ai my-ubuntu
-```
+### 이름 지정
+    ```bash
+    docker run -it --name my-ubuntu ubuntu bash
+    docker start -ai my-ubuntu
+    ```
 - 종료 후 다시 실행하면 이전 상태 그대로 사용 가능
+```
