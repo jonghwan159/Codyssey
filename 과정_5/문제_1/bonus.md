@@ -31,3 +31,15 @@
 - Docker 이미지는 여러 **레이어(Layer)**로 구성되며, 각 레이어는 파일 시스템 변경 내용을 담는다.
 - Dockerfile의 각 명령어 (`RUN`, `COPY`, `ADD`)는 새로운 레이어를 생성한다.
 - 장점: 동일한 레이어를 여러 이미지에서 공유 가능 → 캐시 및 빌드 속도 최적화.
+
+---
+## CNCF Landscape란?
+
+- **CNCF Landscape**는 **Cloud Native Computing Foundation (CNCF)**에서 제공하는  
+  클라우드 네이티브 생태계의 기술들을 **한눈에 볼 수 있게 정리한 대시보드**이다.
+- 컨테이너, 오케스트레이션, CI/CD, 서비스 메시, 모니터링, 보안 등 다양한 분야의  
+  오픈소스 프로젝트와 상용 솔루션들이 분야별로 분류되어 있다.
+- **쿠버네티스(Kubernetes)**, **Prometheus**, **Envoy**, **gRPC** 같은 핵심 프로젝트도 포함된다.
+- **목적**: 빠르게 진화하는 클라우드 네이티브 기술을 체계적으로 파악하고, 적절한 도구를 선택할 수 있도록 도와주는 참고 자료.
+
+🔗 공식 사이트: [https://landscape.cncf.io](https://landscape.cncf.io)

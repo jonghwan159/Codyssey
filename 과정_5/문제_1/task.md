@@ -27,6 +27,6 @@ sudo docker history hello-world
 
 # 8. hello-world 컨테이너 및 이미지 삭제
 # 컨테이너 삭제
-sudo docker rm $(docker ps -a -q --filter ancestor=hello-world)
+sudo bash -c 'docker rm $(docker ps -a -q --filter ancestor=hello-world)'
 # 이미지 삭제
 sudo docker rmi hello-world
