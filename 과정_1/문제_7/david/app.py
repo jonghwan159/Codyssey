@@ -36,7 +36,9 @@ def home():
                 audio = base64.b64encode(fp.read()).decode("utf-8")
 
                 # 로그 저장
-                with open("input_log.txt", "a", encoding="utf-8") as f:
+                log_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "input_log.txt")
+                log_path = os.path.normpath(log_path)
+                with open(log_path, "a", encoding="utf-8") as f:
                     f.write(f"{datetime.now()} | lang={lang} | text={text}\n")
 
             except Exception as e:
