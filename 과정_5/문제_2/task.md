@@ -1,7 +1,7 @@
 # ✅ Ubuntu 컨테이너 실습: Docker 명령어 모음
 ```bash
 # 1. Docker Hub에서 ubuntu 이미지 검색
-docker search ubuntu
+sudo docker search ubuntu
 
 # 2. (웹브라우저에서) Docker Hub 접속 → https://hub.docker.com/_/ubuntu
 # - Overview 탭에서 'Docker Official Image' 뱃지 확인
@@ -62,14 +62,14 @@ sudo docker rm my-ubuntu-test
 
 ### 이름 미지정
 
-docker run -it ubuntu bash
+sudo docker run -it ubuntu bash
 
 - 종료하면 컨테이너도 같이 종료되고, 다시 실행 시 새로운 컨테이너 생성
 
 ### 이름 지정
 
-docker run -it --name my-ubuntu ubuntu bash
-docker start -ai my-ubuntu
+sudo docker run -it --name my-ubuntu ubuntu bash
+sudo docker start -ai my-ubuntu
 
 - 종료 후 다시 실행하면 이전 상태 그대로 사용 가능
 ```
