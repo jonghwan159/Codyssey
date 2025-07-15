@@ -15,12 +15,17 @@ wsl --install
 ```bash
 sudo apt update
 sudo apt install -y ca-certificates curl gnupg lsb-release
-
-# Docker 공식 GPG 키 등록
+```
+1. 디렉토리 생성:
+```bash
 sudo mkdir -p /etc/apt/keyrings
+```
+2. Docker GPG 키 다운로드 및 등록:
+```bash
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
   sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-
+```
+```bash
 # 저장소 추가
 echo \
   "deb [arch=$(dpkg --print-architecture) \
