@@ -28,7 +28,7 @@ kubectl get pod hellok8s -o yaml
 
 ---
 
-## ✅ 3단계: 선언형 YAML 파일 직접 만들기
+## ✅ 3단계: 선언형 YAML 파일 직접 만들기(리눅스 환경)
 
 ```bash
 nano hellok8s.yaml
@@ -53,6 +53,27 @@ spec:
 
 - 저장: `Ctrl + O` → `Enter`  
 - 종료: `Ctrl + X`
+
+---
+## ✅ 3단계: 선언형 YAML 파일 직접 만들기(윈도우 환경)
+
+1. 바탕화면이나 작업 폴더에 hellok8s.yaml 파일을 새로 생성
+
+2. 아래 내용을 복사해서 붙여넣고 저장
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hellok8s-yaml
+  labels:
+    app: helloworld
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
 
 ---
 
