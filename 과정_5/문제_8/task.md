@@ -27,6 +27,31 @@ docker run -d -p 80:80 --name david-web <DockerHub ID>/david:v1.0
 > --name: 컨테이너 이름 지정 (선택 사항)
 
 ## 5. 웹브라우저 확인 (가상머신에서 Firefox 실행)
+---
+### ✅ WSL2에서 Firefox 실행하는 방법
+🔹 전제 조건
+- Windows 11 사용 중
+
+- wsl --version 명령어로 WSL이 최신인지 확인
+
+- Ubuntu가 WSL2로 설정되어 있음
+
+- wslg 기능 활성화됨 (Windows 11에 기본 탑재됨)
+
+#### ✅ 1. Firefox 설치
+```bash
+sudo apt update
+sudo apt install -y firefox
+```
+#### ✅ 2. Firefox 실행
+```bash
+firefox
+```
+- 이 명령어를 입력하면 Windows GUI 창에서 Firefox 브라우저가 실행됩니다.
+
+- 주소창에 http://localhost 또는 http://127.0.0.1 입력하여 Docker 컨테이너가 잘 동작하는지 확인합니다.
+---
+
 - Ubuntu 가상머신에 설치된 Firefox 실행
 
 - 주소창에 http://localhost 또는 http://127.0.0.1 입력
