@@ -1,4 +1,16 @@
 # ✅ 수행과제 명령어 실행 순서
+
+## 0. WSL2 설정 및 Ubuntu 설치 및 실행
+(이미 설치했다면 넘어가도 됩니다)
+
+```powershell
+# PowerShell (관리자 권한)
+wsl --install
+# 설치 완료 후 재부팅 → 자동으로 Ubuntu 설치됨
+```
+
+- 이후 Windows의 시작 메뉴에서 Ubuntu 검색 및 실행 후 터미널에서 아래 명령어 실행
+
 ## 1. Docker 최신 버전 설치 (Ubuntu)
 ```bash
 sudo apt update
