@@ -15,6 +15,12 @@ kubectl explain pod
 ## ✅ 2단계: 기존 hellok8s Pod의 YAML 내용 보기
 
 ```bash
+## 만약 문제_1에서 종료했다면 다시 실행 
+## ※아니면 실행하지 않는다
+kubectl run hellok8s --image=nginx --port=80
+```
+
+```bash
 kubectl get pod hellok8s -o yaml
 ```
 
