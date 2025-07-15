@@ -2,17 +2,18 @@
 
 ## 1. DockerHub 계정 가입 및 토큰 생성
 - https://hub.docker.com 접속 후 회원가입
-- [Account Settings] → [Security] → Access Tokens → New Token 생성
+- [Account Settings] → [Security] → settings/personal-access-tokens → Generate New Token
 - 생성된 토큰은 복사해두기 (비밀번호 대신 사용됨)
 
-## 2. DockerHub 로그인 (토큰 사용)
+## 2. DockerHub 로그인 
 ```bash
 docker login
+(토큰사용시 아래 명령어 추가로 실행)
 Username: <DockerHub 사용자명>
 Password: <복사한 토큰>
 ```
 
-## 3. DockerHub에 저장소 생성
+## 3. DockerHub에 저장소 생성 (홈페이지에서 실행)
 - 저장소 이름: david
 
 - 설정: Public (기본값 유지)
@@ -24,12 +25,17 @@ docker tag david:v1.0 <DockerHub 사용자명>/david:v1.0
 예시:
 
 ```bash
-docker tag david:v1.0 whdgh/david:v1.0
+docker tag david:v1.0 jonghwan159/david:v1.0
 ```
 
 ## 5. DockerHub에 이미지 푸시
 ```bash
 docker push <DockerHub 사용자명>/david:v1.0
+
+예시:
+
+```bash
+docker push jonghwan159/david:v1.0
 ```
 # 🏅 보너스 과제
 
