@@ -66,9 +66,16 @@ docker run hello-world
 docker images
 ```
 
-## 5. 컨테이너 전체 목록 확인
+## 5. 컨테이너 전체 목록 확인 및 삭제
 ```bash
 docker ps -a
+
+# hello-world 컨테이너가 있다면 ID 확인 후 정지 (예: abc123 컨테이너 ID)
+docker stop abc123
+
+# 컨테이너 삭제
+docker rm abc123
+
 ```
 
 ## 6. hello-world 이미지 삭제
