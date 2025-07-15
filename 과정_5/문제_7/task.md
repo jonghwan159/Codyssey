@@ -22,9 +22,21 @@ sudo mkdir -p /etc/apt/keyrings
 ```
 2. Docker GPG 키 다운로드 및 등록:
 ```bash
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
-  sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
+
+## 만약 안된다면 DNS 직접 고정하기
+WSL2는 윈도우 DNS를 따라가는데 이게 종종 깨져요. 아래처럼 수동으로 설정해 주세요.
+
+① 자동 생성 막기
+```bash
+sudo rm /etc/resolv.conf
+sudo bash -c 'echo "nameserver 8.8.8.8" > /etc/resolv.conf'
+sudo chattr +i /etc/resolv.conf  # 수정 방지
+```
+8.8.8.8은 구글 DNS예요. 1.1.1.1 (Cloudflare)도 가능.
+
+## 이어서 진행
 ```bash
 # 저장소 추가
 echo \
