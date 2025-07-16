@@ -65,7 +65,7 @@ kubectl delete pod david
 ## ✅ 8단계: Git에 커밋 및 푸시
 ```bash
 git add .
-git commit -m "Add david pod and service with yaml backup"
+git commit -m "feat/과정_6/문제_3"
 git push origin main
 ```
 
