@@ -71,6 +71,12 @@ ls
 - service.yaml, deployment.yaml 파일이 없어야 합니다.
 (없다면 .dockerignore 파일이 제대로 작동한 것)
 
+✅ 마무리 점검 명령어
+
+```bash
+kubectl get all
+```
+
 ## ✅ 9단계: Git 커밋 및 푸시
 ```bash
 git add .
@@ -88,9 +94,3 @@ git push origin main
 - Deployment는 직접 Pod를 생성하지 않고, 내부적으로 ReplicaSet을 생성해서 원하는 개수의 Pod를 유지합니다.
 
 - 사용자는 deployment.yaml만 관리하고, Kubernetes가 자동으로 ReplicaSet과 Pod를 조정합니다.
-
-✅ 마무리 점검 명령어
-
-```bash
-kubectl get all
-```
