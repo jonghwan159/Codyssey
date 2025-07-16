@@ -24,6 +24,10 @@ minikube start --driver=docker
 - 도중 오류 발생 시 minikube delete 후 재시도
 
 ## ✅ 4단계: 가상머신 재부팅 후 상태 확인
+```powershell
+# 가상머신 재부팅
+wsl --shutdown
+```
 ```bash
 minikube status  # 클러스터 상태 확인
 minikube start   # 필요시 클러스터 재시작
