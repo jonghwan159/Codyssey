@@ -67,7 +67,7 @@ kubectl describe svc david-svc
 minikube service david-svc --url
 ```
 
-- 출력된 URL을 가상머신의 Firefox 브라우저에서 열면 됩니다!
+- 출력된 URL을 가상머신의 Firefox 브라우저에서 열면 됩니다(새로운 터미널 열어서 firefox 치기)!
 
 🟢 최종 확인 명령어:
 
