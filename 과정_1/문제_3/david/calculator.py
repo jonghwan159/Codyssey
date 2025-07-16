@@ -19,8 +19,8 @@ def evaluate_expression(expr):
             return "Invalid input format. Use: number operator number"
 
         a, op, b = tokens
-        a = float(a)
-        b = float(b)
+        a = int(a)
+        b = int(b)
 
         if op == '+':
             return f"Result: {add(a, b)}"
@@ -33,15 +33,15 @@ def evaluate_expression(expr):
         else:
             return "Invalid operator."
     except ValueError:
-        return "Invalid input. Please enter numbers."
+        return "Invalid input. Please enter integers only."
 
 if __name__ == "__main__":
     mode = input("Choose mode (1: step-by-step, 2: one-line expression): ")
 
     if mode == '1':
         try:
-            a = float(input("Enter first number: "))
-            b = float(input("Enter second number: "))
+            a = int(input("Enter first integer: "))
+            b = int(input("Enter second integer: "))
             op = input("Enter operator (+, -, *, /): ")
 
             if op == '+':
@@ -55,7 +55,7 @@ if __name__ == "__main__":
             else:
                 print("Invalid operator.")
         except ValueError:
-            print("Invalid input. Please enter valid numbers.")
+            print("Invalid input. Please enter valid integers.")
 
     elif mode == '2':
         expr = input("Enter expression: ")
