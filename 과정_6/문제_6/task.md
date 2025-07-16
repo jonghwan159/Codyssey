@@ -10,8 +10,8 @@ minikube start --driver=docker
 ```
 ## ✅ 2단계: Git 저장소에서 코드 내려받기
 ```bash
-git clone https://github.com/사용자이름/david.git
-cd david
+git clone https://github.com/jonghwan159/Codyssey.git
+cd Codyssey
 git checkout main
 ```
 ## ✅ 3단계: deployment.yaml 적용
@@ -45,7 +45,7 @@ curl http://<POD_IP>    # 실패 가능
 ```bash
 minikube ssh
 ping <POD_IP>
-curl http://<POD_IP>
+curl http://<POD_IP> 
 exit
 ```
 
