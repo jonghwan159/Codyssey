@@ -64,7 +64,11 @@ code
 
 2. 검색창에 Material Icon Theme 입력 후 설치
 
-3. 설치 후 Command Palette (Ctrl+Shift+P) → Icon Theme → Material Icon Theme 선택
+3. Ctrl + Shift + P 누르기 → Command Palette 열기
+
+4. "Icon Theme" 입력
+
+5. Material Icons: Activate Icon Theme 클릭
 
 
 
@@ -157,3 +161,4 @@ Article.objects.create(title="Hello", content="This is ORM")
 
 # SQL 없이도 조회 가능
 articles = Article.objects.filter(title__contains="Hello")
+```
