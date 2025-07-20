@@ -18,7 +18,11 @@ def main():
     if exponent < 0:
         result = 1 / result
 
-    print(f"Result: {result}")
+    # 결과물 정수 유무에 따른 처리
+    if result.is_integer():
+        print(f"Result: {int(result)}")
+    else:
+        print(f"Result: {result}")
 
 if __name__ == "__main__":
     main()
