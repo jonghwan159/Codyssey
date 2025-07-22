@@ -1,6 +1,7 @@
 def main():
     try:
         number = float(input("Enter number: "))
+
     except ValueError:
         print("Invalid number input.")
         return
@@ -11,7 +12,7 @@ def main():
         print("Invalid exponent input.")
         return
 
-    result = 1
+    result = 1.0
     for _ in range(abs(exponent)):
         result *= number
 
