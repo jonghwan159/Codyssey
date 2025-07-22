@@ -66,19 +66,3 @@ Flask는 초보자에게 적합한 웹 프레임워크로, 프로젝트가 커�
        lsof -i :5000
        kill <PID>
        ```
-
-## 6. **문서 제출 항목**
-
-### 1. 웹 환경 테스트 (app.py)
-
-```python
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route("/")
-def hello_world():
-    return "Hello, DevOps!"
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80)
