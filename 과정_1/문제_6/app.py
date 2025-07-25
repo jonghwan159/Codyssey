@@ -17,4 +17,4 @@ def home():
     return Response(fp.getvalue(), mimetype='audio/mpeg')
 
 if __name__ == "__main__":
-    app.run('0.0.0.0', 5400)  # ← 포트 변경됨
+    app.run('0.0.0.0', 5000)  # ← 포트 변경됨
